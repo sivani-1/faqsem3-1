@@ -1,0 +1,23 @@
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+  }
+  
+  .stat {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .stat h3 {
+    font-size: 3rem;
+    color: #2575fc;
+  }
+  
+  .stat p {
+    font-size: 1.2rem;
+  }
+  

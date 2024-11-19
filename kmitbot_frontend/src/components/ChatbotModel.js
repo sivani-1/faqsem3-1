@@ -18,7 +18,7 @@ function ChatbotModel() {
   
     setLoading(true);
     try {
-      const response = await axios.post('https://9a13-34-23-211-77.ngrok-free.app/process_question', {
+      const response = await axios.post('https://0516-34-90-34-69.ngrok-free.app/process_question', {
         question: inputText,
       });
       const responseMessage = response.data.answer;

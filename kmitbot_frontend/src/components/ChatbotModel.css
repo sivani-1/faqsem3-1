@@ -1,4 +1,4 @@
-body {
+/* body {
     background: linear-gradient(to right, #6a11cb, #2575fc);
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+   */
   .chatbot-container {
     position: fixed;
     bottom: 100px;
