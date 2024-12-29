@@ -1,0 +1,111 @@
+.admin-panel-container {
+    padding: 20px;
+  }
+  
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logout-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .analytics-section, .faq-management-section {
+    margin-bottom: 30px;
+  }
+  
+  .analytics-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .analytics-item {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .faq-form {
+    margin-bottom: 20px;
+  }
+  
+  .faq-input, .faq-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .add-faq-button, .update-faq-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .update-faq-button{
+    background-color: #0d6efd;
+  }
+  
+  .faq-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  
+  .edit-button, .delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .edit-button{
+    background-color: #0d6efd;
+  }
+  .admin-login-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .login-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .login-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    margin-bottom: 10px;
+  }

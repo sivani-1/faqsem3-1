@@ -1,0 +1,12 @@
+.admin-button {
+  position: absolute;
+  top: 90px; 
+  left: 10px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: #4A154B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,242 @@
+body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 500px; /* Increased width */
+  height: 600px; /* Increased height */
+  border: none;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.chatbot-header {
+  background: #4A154B;
+  color: #FFFFFF;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-section {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+.faq-category-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: inherit;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.faq-category-button {
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  margin-right: 5px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  margin-bottom: 5px;
+}
+
+.faq-category-button.active,
+.faq-category-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+.faq-list {
+  overflow-y: auto;
+  max-height: 120px;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to multiple rows */
+  justify-content: space-between; /* Distribute space between items */
+  gap: 10px; /* Gap between items */
+}
+
+.faq-item {
+  background: #FFFFFF;
+  border: 2.1px dotted;
+  padding: 8px 12px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-grow: 1; /* Allow items to grow and occupy available space */
+  width: fit-content;
+  max-width: 95%;
+}
+
+/* Colors for different categories (add more if needed) */
+.faq-item.category-faqs {
+  border-color: #800000; /* Maroon */
+}
+
+.faq-item.category-placements {
+  border-color: #008000; /* Green */
+}
+
+.faq-item.category-subjects {
+  border-color: #000080; /* Navy Blue */
+}
+
+.faq-item.category-faculty {
+  border-color: #808000; /* Olive */
+}
+
+.faq-item.category-other {
+  border-color: #800080; /* Purple */
+}
+
+.faq-item:hover {
+  background-color: #f0f0f0;
+}
+
+.faq-question-text {
+  margin: 0;
+}
+
+.chat-history {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f4f4f4;
+}
+
+.chat-message {
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 70%;
+}
+
+.chat-message.user {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.chat-message.bot {
+  background-color: #e9e9eb;
+  color: #333;
+}
+
+.feedback-buttons {
+  display: flex;
+  margin-top: 5px;
+}
+
+.feedback-buttons svg {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #666;
+}
+
+.feedback-buttons svg.active {
+  color: #007bff;
+}
+
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: #fff;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+
+.chat-input button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  background: #007bff; 
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.chatbot-icon:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.chatbot-icon:active {
+  transform: scale(0.95); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
